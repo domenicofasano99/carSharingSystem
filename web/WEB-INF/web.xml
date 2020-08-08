@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>AutonoleggioDAOfactory</display-name>
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>Servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Registrazione</servlet-name>
+		<servlet-class>Servlet.RegistrazioneServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Registrazione</servlet-name>
+		<url-pattern>/SigninServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RecuperaPasswordServlet</servlet-name>
+		<servlet-class>Servlet.RecuperaPasswordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RecuperaPasswordServlet</servlet-name>
+		<url-pattern>/RecuperaPasswordServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RecuperaPassword</servlet-name>
+		<jsp-file>/recuperaPassword.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RecuperaPassword</servlet-name>
+		<url-pattern>/recuperaPassword</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>Servlet.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Utente</servlet-name>
+		<jsp-file>/WEB-INF/jsp/user.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Utente</servlet-name>
+		<url-pattern>/utente/home</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Admin</servlet-name>
+		<jsp-file>/WEB-INF/jsp/admin.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Admin</servlet-name>
+		<url-pattern>/admin/home</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AggiungiCategoria</servlet-name>
+		<jsp-file>/WEB-INF/jsp/aggiungiCategoria.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AggiungiCategoria</servlet-name>
+		<url-pattern>/admin/aggiungiCategoria</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddCat</servlet-name>
+		<servlet-class>Servlet.AggiungiCategoriaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddCat</servlet-name>
+		<url-pattern>/admin/addCat</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Noleggi</servlet-name>
+		<jsp-file>/WEB-INF/jsp/noleggi.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Noleggi</servlet-name>
+		<url-pattern>/admin/noleggi</url-pattern>
+	</servlet-mapping>
+	<servlet>
+
+		<servlet-name>ViewAllNoleggi</servlet-name>
+		<servlet-class>Servlet.ViewAllNoleggiServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewAllNoleggi</servlet-name>
+		<url-pattern>/admin/ViewAllNoleggi</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ViewCar</servlet-name>
+		<servlet-class>Servlet.ViewAutoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewCar</servlet-name>
+		<url-pattern>/admin/ViewCar</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AggiungiAuto</servlet-name>
+		<jsp-file>/WEB-INF/jsp/aggiungiAuto.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AggiungiAuto</servlet-name>
+		<url-pattern>/admin/aggiungiAuto</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddCar</servlet-name>
+		<servlet-class>Servlet.AggiungiAutoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddCar</servlet-name>
+		<url-pattern>/admin/addCarServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GoToAddCar</servlet-name>
+		<servlet-class>Servlet.goToAggiungiAutoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GoToAddCar</servlet-name>
+		<url-pattern>/admin/goToAddCarServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteCar</servlet-name>
+		<servlet-class>Servlet.EliminaAutoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteCar</servlet-name>
+		<url-pattern>/admin/deleteCar</url-pattern>
+	</servlet-mapping>
+	<!-- UTENTE -->
+	<servlet>
+		<servlet-name>ViewNoleggi</servlet-name>
+		<servlet-class>Servlet.ViewNoleggiServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewNoleggi</servlet-name>
+		<url-pattern>/utente/noleggiAttivi</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ViewParcoAuto</servlet-name>
+		<servlet-class>Servlet.ViewParcoAutoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewParcoAuto</servlet-name>
+		<url-pattern>/utente/viewParcoAuto</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>parcoAuto</servlet-name>
+		<jsp-file>/WEB-INF/jsp/parcoAuto.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>parcoAuto</servlet-name>
+		<url-pattern>/utente/parcoAuto</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EliminaNoleggio</servlet-name>
+		<servlet-class>Servlet.EliminaNoleggioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EliminaNoleggio</servlet-name>
+		<url-pattern>/utente/eliminaNoleggio</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CercaCar</servlet-name>
+		<servlet-class>Servlet.CercaAutoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CercaCar</servlet-name>
+		<url-pattern>/utente/cercaAuto</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CalcoloAffitto</servlet-name>
+		<servlet-class>Servlet.CalcoloAffittoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CalcoloAffitto</servlet-name>
+		<url-pattern>/utente/calcoloAffitto</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>preventivoAffitto</servlet-name>
+		<jsp-file>/WEB-INF/jsp/preventivoAffitto.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>preventivoAffitto</servlet-name>
+		<url-pattern>/utente/preventivoAffitto</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>AffittaAuto</servlet-name>
+		<servlet-class>Servlet.AffittaAutoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AffittaAuto</servlet-name>
+		<url-pattern>/utente/affittaAuto</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ModificaProfilo</servlet-name>
+		<jsp-file>/WEB-INF/jsp/modificaProfilo.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModificaProfilo</servlet-name>
+		<url-pattern>/utente/modificaProfilo</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ModificaProfiloServlet</servlet-name>
+		<servlet-class>Servlet.ModificaProfiloServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModificaProfiloServlet</servlet-name>
+		<url-pattern>/utente/modificaProfiloServlet</url-pattern>
+	</servlet-mapping>
+
+
+
+
+	<!-- <servlet> <servlet-name>HomeAdmin</servlet-name> <servlet-class>Servlet.BackHomeAdminServlet</servlet-class>
+		</servlet> -->
+
+
+
+
+	<servlet>
+		<servlet-name>ViewCarClient</servlet-name>
+		<servlet-class>Servlet.ViewAutoClientServlet</servlet-class>
+	</servlet>
+
+
+
+
+
+
+
+
+
+
+
+	<!-- MAPPING -->
+
+
+	<!-- <servlet-mapping> <servlet-name>HomeAdmin</servlet-name> <url-pattern>/HomeAdmin</url-pattern>
+		</servlet-mapping> -->
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>ViewCarClient</servlet-name>
+		<url-pattern>/ViewCarClientServlet</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+
+	<!-- FILTER -->
+	<filter>
+		<filter-name>UtenteFilter</filter-name>
+		<filter-class>filters.UtenteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>UtenteFilter</filter-name>
+		<url-pattern>/utente/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>AdminFilter</filter-name>
+		<filter-class>filters.AdminFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AdminFilter</filter-name>
+		<url-pattern>/admin/*</url-pattern>
+	</filter-mapping>
+
+
+
+
+	<context-param>
+		<param-name>admin</param-name>
+		<param-value>admin@mail.com</param-value>
+
+	</context-param>
+	<context-param>
+		<param-name>password</param-name>
+		<param-value>admin99</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>email_username</param-name>
+		<param-value>youremail@gmail.com</param-value>
+
+	</context-param>
+	<context-param>
+		<param-name>email_password</param-name>
+		<param-value>***</param-value>
+	</context-param>
+</web-app>
